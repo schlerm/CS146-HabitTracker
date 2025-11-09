@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #d32f2f;   
+  --secondary-color: #fdd835;
+  --background-color: #fffaf0; 
+  --text-color: #222;
+  --card-bg: #fff;
+  --muted: #666;
+  --border: #e7e7e7;
+  --focus: #ffec99;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header h1,
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.toolbar {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.toolbar li {
+  margin: 10px 20px;
+}
+
+.toolbar a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.toolbar a:hover,
+.toolbar a:focus {
+  color: #fff;
+  transform: scale(1.06);
+  outline: none;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main > h3 {
+  color: var(--primary-color);
+  font-size: 1.6em;
+  margin-bottom: 8px;
+}
+
+main > p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.my-habit-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.my-habit-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.my-habit-list li:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.my-habit-list input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.my-habit-list label {
+  font-size: 1.05em;
+  cursor: pointer;
+}
+
+.my-habit-list input[disabled] {
+  cursor: not-allowed;
+  filter: grayscale(0.2);
+  opacity: 0.8;
+}
+.my-habit-list input[disabled] + label {
+  cursor: not-allowed;
+  color: #444;
+}
+
+.my-habit-list input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.my-habit-list li:focus-within {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.8em;
+  background: var(--secondary-color);
+  color: #332600;
+  font-weight: 600;
+}
+
+p.card {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  background: #fff;
+  padding: 20px;
+  border-left: 6px solid var(--primary-color);
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop, tablet, and phone */
+
+@media screen and (min-width: 1000px) {
+  body {
+    padding: 40px 80px;
+  }
+
+  header h1, h1 {
+    font-size: 3em;
+  }
+
+  .toolbar ul {
+    flex-direction: row;
+  }
+
+  .toolbar li {
+    margin: 15px 30px;
+  }
+
+  main > p {
+    font-size: 1.05em;
+  }
+
+  .my-habit-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .my-habit-list li {
+    padding: 16px 18px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 998px) {
+  header h1, h1 {
+    font-size: 2em;
+  }
+
+  .toolbar ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .toolbar li {
+    margin: 10px 15px;
+  }
+
+  .my-habit-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .my-habit-list li {
+    padding: 14px 16px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  header h1, h1 {
+    font-size: 1.5em;
+  }
+
+  .toolbar ul {
+    flex-direction: column;
+  }
+
+  .toolbar li {
+    margin: 8px 0;
+  }
+
+  .toolbar a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 1em;
+  }
+
+  .my-habit-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .my-habit-list li {
+    grid-template-columns: 24px 1fr;
+    padding: 14px;
+  }
+
+  .my-habit-list input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+  }
+
+  .my-habit-list label {
+    font-size: 1em;
+  }
+}
