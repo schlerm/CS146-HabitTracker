@@ -166,6 +166,13 @@ p.card {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+.habit_add_button{ 
+  padding: 2px;
+  background-color: lightcoral;  
+  color:#d32f2f;
+  border-radius: 3px;
+}
+
 /* Desktop, tablet, and phone */
 
 @media screen and (min-width: 1000px) {
@@ -263,3 +270,4 @@ p.card {
     font-size: 1em;
   }
 }
+
