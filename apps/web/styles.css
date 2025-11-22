@@ -271,3 +271,35 @@ p.card {
   }
 }
 
+
+/* Alex Contribution - styles for Nov 22 for edits to habitList and new script.js */
+
+.add-container {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.add-header {
+  margin-top: 0;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.input-style {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.habit_add_button {
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
