@@ -1,10 +1,15 @@
 <!-- Alex contribution - Oct22 -->
+<!-- Alex contribution on Nov 22;  edits made for up-to date for new requirements-->
 
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StevensHabitTracker</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+    <!-- was crashing w/ out defer, so i added it-->
 
 
 </head>
@@ -19,38 +24,59 @@
             <li><a href="index.html">HOME</a></li>
             <li><a href="habitList.html">MY HABITS</a></li>
             <li><a href="habitAdd.html">ADD A HABITS</a></li>
-            <li><a href="login.html">LOGIN</a></li>  <!-- I am not sure if we are keeping this or not-->
+            <li><a href="login.html">LOGIN</a></li> <!-- I am not sure if we are keeping this or not-->
         </ul>
     </nav>
 
 
     <main>
         <h3>My Habits</h3>
-        <p>All of your habits are located here.  As you complete them, check them off</p>
-        
-        <ul class="my-habit-list">
+        <p>All of your habits are located here. As you complete them, check them off</p>
+
+        <!-- Alex contribution on Nov 22-->
+        <section class="add-container">
+            <h4 class="add-header">Add a new habit!</h4>
+
+            <form id="habitAddForm">
+                <input type="text" id="habitName" placeholder="Habit Name" class="input-style">
+
+                <input type="date" id="habitDate" class="input-style">
+
+                <select id="habitPriority" class="input-style">
+                    <option value="Normal">Normals</option>
+                    <option value="High">High</option>
+                </select>
+
+                <button type="submit" class="habit_add_button">Add</button>
+            </form>
+        </section>
+
+        <!-- End of 11/22 contribution  -->
+
+        <ul class="my-habit-list" id="habitList">
             <li>
-                <input type = "checkbox" id="habit1" disabled>
-                <label for = "habit1">Example habit 1</label>
+                <input type="checkbox" id="habit1" disabled>
+                <label for="habit1">Example habit 1</label>
             </li>
             <li>
-                <input type = "checkbox" id="habit2" disabled>
-                <label for = "habit2">Example habit 2</label>
+                <input type="checkbox" id="habit2" disabled>
+                <label for="habit2">Example habit 2</label>
             </li>
             <li>
-                <input type = "checkbox" id="habit3" disabled>
-                <label for = "habit3">Example habit 3</label>
+                <input type="checkbox" id="habit3" disabled>
+                <label for="habit3">Example habit 3</label>
             </li>
             <li>
-                <input type = "checkbox" id="habit4" disabled>
-                <label for = "habit4">Example habit 4</label>
+                <input type="checkbox" id="habit4" disabled>
+                <label for="habit4">Example habit 4</label>
             </li>
             <li>
-                <input type = "checkbox" id="habit5" disabled>
-                <label for = "habit5">Example habit 5</label>
+                <input type="checkbox" id="habit5" disabled>
+                <label for="habit5">Example habit 5</label>
             </li>
         </ul>
     </main>
 
 </body>
+
 </html>
