@@ -173,6 +173,15 @@ p.card {
   border-radius: 3px;
 }
 
+.hist{
+  text-align: center;
+  color: #d32f2f;   
+}
+
+.hist-container {
+    text-align: center;
+}
+
 /* Desktop, tablet, and phone */
 
 @media screen and (min-width: 1000px) {
