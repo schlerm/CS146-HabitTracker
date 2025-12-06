@@ -38,6 +38,16 @@ document.addEventListener('DOMContentLoaded', function () {
             newLabel.textContent = labelText;
             newListItem.appendChild(checkbox);
             newListItem.appendChild(newLabel);
+
+            const delbutton = document.createElement('img')
+            delbutton.src = 'trash.ico';
+            delbutton.classList.add('delbutton');
+            delbutton.addEventListener('click', () => {
+                newListItem.remove();
+            })
+
+            newListItem.appendChild(delbutton)
+
             listContainer.prepend(newListItem);
 
             form.reset();

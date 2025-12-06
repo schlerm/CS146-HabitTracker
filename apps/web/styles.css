@@ -96,7 +96,7 @@ main > p {
 
 .my-habit-list li {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 12px;
   padding: 14px 16px;
@@ -274,6 +274,14 @@ p.card {
   outline-offset: 4px;
 }
 
+
+.delbutton {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+}
 
 /* Desktop, tablet, and phone */
 
