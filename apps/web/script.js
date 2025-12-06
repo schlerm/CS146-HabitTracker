@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             if (Priority.includes('High')) {
-                labelText += `Priority: High - don't procrastinate just do it`;
+                labelText += ` - High priority; Do not procrastinate`;
                 newListItem.style.borderLeftColor = 'red';
                 //I added this to make it stand out a tad //
                 newListItem.style.fontWeight = 'bold';
