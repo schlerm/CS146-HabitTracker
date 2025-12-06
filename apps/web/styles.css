@@ -314,6 +314,10 @@ p.card {
   .my-habit-list li {
     padding: 16px 18px;
   }
+
+   #home-main {
+    flex-direction: row; 
+  }
 }
 
 @media screen and (min-width: 400px) and (max-width: 998px) {
@@ -337,6 +341,20 @@ p.card {
 
   .my-habit-list li {
     padding: 14px 16px;
+  }
+
+  #home-main {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .image-container img {
+    width: 80%;  
+    max-width: 500px;
+  }
+
+  .text-container {
+    max-width: 100%;
   }
 }
 
@@ -379,8 +397,24 @@ p.card {
   .my-habit-list label {
     font-size: 1em;
   }
-}
 
+   #home-main {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .image-container img {
+    width: 100%;  
+  }
+
+  .text-container {
+    max-width: 80%;
+  }
+
+  .text-container p {
+    font-size: 16px;
+}
+}
 
 /* Alex Contribution - styles for Nov 22 for edits to habitList and new script.js */
 
@@ -412,4 +446,59 @@ p.card {
   color: white;
   border: none;
   border-radius: 3px;
+}
+
+
+#home-main{
+  display: flex;
+  align-items: center; 
+  max-width: 2000px;
+  margin: 0 auto;
+  gap: 20px; 
+  justify-content: center;  
+}
+
+
+.image-container {
+  flex-shrink: 0;
+}
+
+.image-container img {
+  border-radius: 50px;
+  width: 600px; 
+  display: block;
+}
+
+.text-container {
+  flex: 1; 
+  max-width: 600px;
+}
+
+.text-container p {
+  font-weight: bold;
+  font-size: 21px;
+  text-align: center;
+  margin: 0;
+}
+
+.image-container2 {
+  flex-shrink: 0;
+}
+
+.image-container2 img {
+  border-radius: 50px;
+  width: 600px; 
+  display: block;
+}
+
+.text-container2 {
+  flex: 1; 
+  max-width: 600px;
+}
+
+.text-container2 p {
+  font-weight: bold;
+  font-size: 21px;
+  text-align: center;
+  margin: 0;
 }
