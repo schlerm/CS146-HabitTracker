@@ -315,8 +315,18 @@ p.card {
     padding: 16px 18px;
   }
 
-   #home-main {
+    #home-main {
     flex-direction: row; 
+    align-items: center;
+  }
+
+  .image-container img {
+    width: 80%;  
+    max-width: 500px;
+  }
+
+  .text-container {
+    max-width: 100%;
   }
 }
 
